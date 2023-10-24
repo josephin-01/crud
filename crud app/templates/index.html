@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+    <title>Employee Management App</title>
+</head>
+<body>
+    <h1>Employee List</h1>
+    <div class="form-container">
+        <form id="add-form">
+            <label for="fullName">Full Name</label>
+            <input type="text" name="fullName" id="fullName" required>
+            <label for="email">Email Id</label>
+            <input type="text" name="email" id="email">
+            <label for="salary">Salary</label>
+            <input type="text" name="salary" id="salary">
+            <label for="city">City</label>
+            <input type="text" name="city" id="city">
+            <button id="add-btn">Add Employee</button>
+        </form>
+    </div>
+    <div class="details-container">
+        <h2>Employee Details</h2>
+        <table class="list" id="employeelist">
+            <thead>
+                <tr>
+                    <th>Full Name</th>
+                    <th>Email Id</th>
+                    <th>Salary</th>
+                    <th>City</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody id="employee-details"></tbody>
+        </table>
+    </div>
+    <script src="{{ url_for('static', filename='script.js')}}"></script>
+</body>
+</html>
